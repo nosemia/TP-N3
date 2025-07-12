@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int cantidad;
+    int nota;
+    int aprobados = 0, desaprobados = 0;
+
+    cout << "¿Cuántas notas querés ingresar? ";
+    cin >> cantidad;
+
+    // Validar que la cantidad sea mayor que cero
+    if (cantidad <= 0) {
+        cout << "La cantidad debe ser mayor que cero." << endl;
+        return 1;
+    }
+
+    for (int i = 1; i <= cantidad; i++) {
+        do {
+            cout << "Ingrese la nota del alumno " << i << " (entre 0 y 10): ";
+            cin >> nota;
+
+            if (nota < 0 || nota > 10) {
+                cout << "Nota inválida. Ingrese un número entre 0 y 10." << endl;
+            }
+        } while (nota < 0 || nota > 10);
+
+        if (nota >= 7) {
+            aprobados++;
+        } else {
+            desaprobados++;
+        }
+    }
+
+    cout << endl << "Resultados finales:" << endl;
+    cout << "Aprobados: " << aprobados << endl;
+    cout << "Desaprobados: " << desaprobados << endl;
+
+    return 0;
+}
