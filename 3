@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+ float numero;
+ cout << "Ingrese un número: ";
+ cin >> numero;
+ while (numero >= 0.01) {
+ numero /= 2;
+ cout << numero << endl;
+ }
+ return 0;
+}
