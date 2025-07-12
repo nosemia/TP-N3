@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+ int suma = 0, contador = 0;
+ for (int i = 1; i <= 300; i++) {
+ if (i % 2 != 0) {
+ suma += i;
+ contador++;
+ }
+ }
+ cout << "Cantidad de impares: " << contador << ", Sumatoria: " << suma << endl;
+ return 0;
+}
